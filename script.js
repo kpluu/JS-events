@@ -101,9 +101,44 @@ doubleClickerNavbar.addEventListener("dblclick", onDoubleClick);
 // Fonctionnalité 6 : 
 //1. Find and store the element we want to listen to events on.
 var cardOne = document.getElementsByClassName("col-md-4")[0];
-var editButton = document.getElementsByClassName("btn btn-sm btn-outline-secondary")[0];
+var viewButton = document.getElementsByClassName("btn btn-sm btn-success")[0];
 
+console.log(document.querySelectorAll("col-md-4").length);
 
-// 2. Define the function that will respond to the event.`
+// 2. Define the function that will respond to the event.
+
+let cards = document.querySelectorAll("col-md-4")
+
+for (let i = 0; i < cards.length; i++) {
+    cards[i].hoverView
+}
+
+var hoverView = function (){
+    // When hover on view button, make the text disappear 
+
+    var cardContent = document.getElementsByClassName("card-text")[0];
+    console.log(cardContent)
+
+    var cardText = cardContent.textContent;
+    console.log(cardText)
+
+    var cardContent = document.getElementsByClassName("card-text")[0];
+        if (cardContent.innerHTML === cardText) {
+        cardContent.innerHTML = '' ;
+        } else {
+        cardContent.innerHTML = cardText ;
+    }
+
+    // When hover on view button, reduce the image by 20%
+
+    var cardImage = document.getElementsByClassName("card-img-top")[0];
+        if (cardImage.style.width === "20%") {
+        cardImage.style.width = "100%";
+        }else {
+        cardImage.style.width = "20%" ;
+    }
+}
 
 // 3. Add the event listener for the element and function
+
+viewButton.addEventListener("mouseover", hoverView);
