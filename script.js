@@ -1,6 +1,3 @@
-console.log("coucou depuis la console");
-
-
 // Fonctionnalité 1 et 1bis
 
 //1. Find and store the element we want to listen to events on.
@@ -17,6 +14,9 @@ var onFooterClick = function() {
 // 3. Add the event listener for the element and function
 clickerFooter.addEventListener("click", onFooterClick);
 
+// ----------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------
+
 // Fonctionnalité 2 : 
 //1. Find and store the element we want to listen to events on.
 var burger = document.getElementsByClassName("navbar-toggler")[0];
@@ -28,6 +28,9 @@ var onBurgerClick = function () {
 }
 // 3. Add the event listener for the element and function
 burger.addEventListener("click", onBurgerClick);
+
+// ----------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------
 
 // Fonctionnalité 3 : 
 //1. Find and store the element we want to listen to events on.
@@ -41,6 +44,9 @@ var onEditClick = function () {
 }
 // 3. Add the event listener for the element and function
 editButton.addEventListener("click", onEditClick);
+
+// ----------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------
 
 // Fonctionnalité 4 : 
 //1. Find and store the element we want to listen to events on.
@@ -61,6 +67,9 @@ var onEditClick = function () {
    
 // 3. Add the event listener for the element and function
 editButtonTwo.addEventListener("click", onEditClick);
+
+// ----------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------
 
 // Fonctionnalité 5 : 
 //1. Find and store the element we want to listen to events on.
@@ -85,3 +94,16 @@ var onDoubleClick = function () {
 }
 // 3. Add the event listener for the element and function
 doubleClickerNavbar.addEventListener("dblclick", onDoubleClick);
+
+// ----------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------
+
+// Fonctionnalité 6 : 
+//1. Find and store the element we want to listen to events on.
+var cardOne = document.getElementsByClassName("col-md-4")[0];
+var editButton = document.getElementsByClassName("btn btn-sm btn-outline-secondary")[0];
+
+
+// 2. Define the function that will respond to the event.`
+
+// 3. Add the event listener for the element and function
