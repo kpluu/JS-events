@@ -67,17 +67,21 @@ editButtonTwo.addEventListener("click", onEditClick);
 var doubleClickerNavbar = document.getElementsByClassName("navbar navbar-dark bg-dark box-shadow")[0];
 console.log(doubleClickerNavbar)
 
+var stylesheetLink = document.querySelector("link")
+console.log(stylesheetLink);
+
+var bootstrapLink = stylesheetLink.href
+console.log(bootstrapLink);
+
 // 2. Define the function that will respond to the event.`
-var style = document.styleSheets[0]
-console.log(style)
 
+var bootstrap_hidden = true;
 var onDoubleClick = function () {
-    if (document.styleSheets[0].disabled = true) {
-        document.styleSheets[0].disabled = '';
+    if (bootstrap_hidden === true) {
+        stylesheetLink.href = "#"
       } else {
-        document.styleSheets[0].disabled = true;
-      }
+        stylesheetLink.href = bootstrapLink
+    }
 }
-
 // 3. Add the event listener for the element and function
 doubleClickerNavbar.addEventListener("dblclick", onDoubleClick);
