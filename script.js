@@ -142,3 +142,32 @@ var hoverView = function (){
 // 3. Add the event listener for the element and function
 
 viewButton.addEventListener("mouseover", hoverView);
+
+// ----------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------
+
+// Fonctionnalité 7 : 
+//1. Find and store the element we want to listen to events on.
+var greyButton = document.getElementsByClassName("btn btn-secondary my-2")[0];
+console.log(greyButton);
+
+// 2. Define the function that will respond to the event.
+var cardOne = document.getElementsByClassName("col-md-4")[0];
+console.log(cardOne.parentNode);
+
+var node = cardOne.parentNode
+console.log(node);
+
+var lastChildCard = document.getElementsByClassName("col-md-4")[5];
+console.log(lastChildCard);
+
+var moveCardSix = function() {
+
+    var lastChildCard = document.getElementsByClassName("col-md-4")[5];
+    var node = cardOne.parentNode
+    node.insertBefore(lastChildCard, node.childNodes[0]);
+}
+
+// 3. Add the event listener for the element and function
+
+greyButton.addEventListener("click", moveCardSix)
